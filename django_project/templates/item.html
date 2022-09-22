@@ -8,12 +8,10 @@
 
 <body> 
     <h1> <a href='/'> home <a> </h1>
-    {% for item in items %}
-            {% if item.id == item_id %}
-                <dir> <h3> Товар: {{item.name}} </h3> 
-                <h3> Количество: {{item.count}} штук </h3> </dir>
-            {% endif %}
-    {% endfor %}    
+        <dir> <h3> Товар: {{item.name}} </h3> 
+        <h3> Количество: {{item.count}} штук </h3> </dir>
+                
+               
        
 
 </body>

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotFound
 from MainApp.models import Item
+from django.core.exceptions import ObjectDoesNotExist
 
 # Create your views here.
 
@@ -47,9 +48,12 @@ def items_list(request):
 
 
 def item(request, item_id):
-    items = Item.objects.all()
+    try:
+        item = Item.objects.get(pk=item_id)
+    except:
+        raise ObjectDoesNotExist
     context = {
-        "items" : items,
+        "item" : item,
         "title" : title,
         "item_id" : item_id
     }
