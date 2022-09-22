@@ -1,8 +1,10 @@
 
-<!DOCTYPE html>
-<html lang = "en">
-<head>
-    <title> Title </title>
+{% extends 'base.html' %}
+{% block style %}
+    {# подставляем содержимое блока родительского шаблона #}
+    {{ block.super }}
+    {# добавляем уникальную css для данной страницы #}
+    <link rel="stylesheet" href="new_style.css">
     <style>
         ol {
             width: 100%; /* Ширина таблицы */
@@ -19,16 +21,9 @@
             margin: 1px;
         }
     </style>
-    
-</head>
+{% endblock %}
 
-<body> 
-    {% comment %} <ol>
-        {% for item in items %}
-            <li> <a href='item/{{item.id}}'> {{item.name}} </a> </li>
-        {% endfor %}
-    </ol>     {% endcomment %}
-
+{% block content %}
     <table border = "1">
         <tbody>
             <ol>
@@ -39,7 +34,8 @@
                     </li>
                 {% endfor %}
             </ol>
-      </table>
+    </table>
+{% endblock %}
 
-</body>
-</html>
+
+
