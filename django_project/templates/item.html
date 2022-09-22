@@ -9,10 +9,6 @@
 <body> 
     <h1> <a href='/'> home <a> </h1>
         <dir> <h3> Товар: {{item.name}} </h3> 
-        <h3> Количество: {{item.count}} штук </h3> </dir>
-                
-               
-       
-
+        <h3> Количество: <span style="color:blue"> {{item.count|default:"Нет на складе"}} </span> </h3> </dir>
 </body>
 </html>

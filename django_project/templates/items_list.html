@@ -3,15 +3,43 @@
 <html lang = "en">
 <head>
     <title> Title </title>
+    <style>
+        ol {
+            width: 100%; /* Ширина таблицы */
+            background: white; /* Цвет фона таблицы */
+        } 
+
+        li {
+            background: white; /* Цвет фона ячеек */
+            padding: 25px; /* Поля вокруг текста */
+            color: blue;
+            display: inline-block;
+            border: 1px solid black;
+            width: 20%;
+            margin: 1px;
+        }
+    </style>
     
 </head>
 
 <body> 
-    <ol>
+    {% comment %} <ol>
         {% for item in items %}
             <li> <a href='item/{{item.id}}'> {{item.name}} </a> </li>
         {% endfor %}
-    </ol>    
+    </ol>     {% endcomment %}
+
+    <table border = "1">
+        <tbody>
+            <ol>
+                {% for item in items %}
+                    <li> 
+                        <h1> {{item.name}} {{item.brand}} </h1>
+                        <h2> <a href='item/{{item.id}}'> Описание товара </a> </h2>
+                    </li>
+                {% endfor %}
+            </ol>
+      </table>
 
 </body>
 </html>

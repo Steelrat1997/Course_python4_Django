@@ -6,4 +6,4 @@ class Item(models.Model):
    count = models.PositiveIntegerField()
 
    def __repr__(self):
-      return f"Item: {self.name}/{self.count} count {self.count}"
+      return f"Item: {self.name}\nCount: {self.count}"
