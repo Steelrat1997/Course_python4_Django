@@ -1,1 +1,17 @@
-KEKW
+
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <title> {{title}} </title>
+    <h1> {{title}} </h1>
+</head>
+
+<body> 
+    <ol>
+        {% for item in items %}
+            <li> <a href='item/{{item.id}}'> {{item.name}} </a> </li>
+        {% endfor %}
+    </ol>    
+
+</body>
+</html>

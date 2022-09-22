@@ -1,17 +1,12 @@
 
 <!DOCTYPE html>
-<html>
-<head> </head>
+<html lang = "en">
+<head>
+    <title> Title </title>
+    
+</head>
 
 <body> 
-    {% comment %} <ol>
-        <li>{{items.0.name}} </li>
-        <li>{{items.1.name}} </li>
-        <li>{{items.2.name}} </li>
-        <li>{{items.3.name}} </li>
-        <li>{{items.4.name}} </li>
-    </ol>     {% endcomment %}
-
     <ol>
         {% for item in items %}
             <li> <a href='item/{{item.id}}'> {{item.name}} </a> </li>
