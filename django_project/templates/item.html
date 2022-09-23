@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block content %}
-    <h1> <a href='/'> home <a> </h1>
+    <h1> <a href="{% url 'items-list' %}"> home <a> </h1>
     <dir> <h3> Товар: {{item.name}} </h3> 
     <h3> Количество: <span style="color:blue"> {{item.count|default:"Нет на складе"}} </span> </h3> </dir>
 {% endblock %}

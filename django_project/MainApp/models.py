@@ -6,4 +6,7 @@ class Item(models.Model):
    count = models.PositiveIntegerField()
 
    def __repr__(self):
-      return f"Item: {self.name}\nCount: {self.count}"
+      return f"Item: {self.name} Brand: {self.brand}  Count: {self.count}"
+
+   def __str__(self):
+      return f"Item:{self.name}        Brand:{self.brand}         Count:{self.count}"
